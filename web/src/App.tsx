@@ -1,6 +1,5 @@
 import "./styles/main.css";
 import * as Dialog from "@radix-ui/react-dialog";
-import * as Checkbox from "@radix-ui/react-checkbox";
 
 import logoImg from "./assets/logo-nlw-esports.svg";
 import { CreateAdBanner } from "./compoenents/CreateAdBanner";

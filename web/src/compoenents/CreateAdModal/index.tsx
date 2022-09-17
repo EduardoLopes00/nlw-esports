@@ -28,6 +28,11 @@ export function CreateAdModal() {
       return;
     }
 
+    if (data.name == "") {
+      alert("Digite um nome válido!");
+      return;
+    }
+
     try {
       const ad = await api.post(`/games/${data.game}/ads`, {
         name: data.name,
@@ -39,7 +44,7 @@ export function CreateAdModal() {
         useVoiceChannel: useVoiceChannel,
       });
 
-      alert("Anúncio criado com sucesso!");
+      alert("Anúncio criado com sucesso!\n\n" + ad);
     } catch (err) {
       alert("Erro ao criar o anúncio!\n\n" + err);
     }
